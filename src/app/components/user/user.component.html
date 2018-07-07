@@ -1,0 +1,30 @@
+
+<h1> {{name}}</h1>
+<ul>
+  <li>Age:{{age}}</li>
+  <li>Email:{{email}}</li>
+  <li>Full Address :{{address.street}} {{address.city}} {{address.state}}</li>
+</ul>
+<button (click)="onClick()">ClikcMe</button>
+<h1>Edit user</h1>
+<form>
+<div>
+<input type="text"  [(ngModel)]="email" name="email">
+</div>
+</form>
+<h1>Hobbies</h1>
+<ul>
+  <li *ngFor="let item of hobbies">{{item}}</li>
+</ul>
+<form (submit)="addHobby(hobby.value)">
+<div>
+   Hobby
+  <input type="text"#hobby>
+</div>
+
+
+</form>
+<h1>Posts</h1>
+<ul>
+  <li *ngFor="let post of posts">{{post.body}}</li>
+</ul>
